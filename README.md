@@ -1,2 +1,2 @@
-# app-daily-backend
+# daily-backend
  

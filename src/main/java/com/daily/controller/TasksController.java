@@ -4,14 +4,16 @@ import com.daily.dto.TaskRequestDTO;
 import com.daily.dto.TaskResponseDTO;
 import com.daily.model.Task;
 import com.daily.repository.DailyRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("task")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class TasksController {
 
     @Autowired
@@ -22,6 +24,17 @@ public class TasksController {
         Task taskData = new Task(task);
         repository.save(taskData);
         return;
+    }
+
+    @PutMapping("/{taskId}")
+    public void updateTask(@PathVariable Long taskId, @RequestBody TaskRequestDTO taskDTO) {
+        Optional<Task> optionalTask = repository.findById(taskId);
+        if (optionalTask.isPresent()) {
+            Task taskData = optionalTask.get();
+            taskData.setTitle(taskDTO.title());
+            taskData.setDescription(taskDTO.description());
+            repository.save(taskData);
+        }
     }
 
     @GetMapping

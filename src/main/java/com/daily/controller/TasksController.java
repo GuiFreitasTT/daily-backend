@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("task")
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+@CrossOrigin(origins = "http://localhost:4200")
 public class TasksController {
 
     @Autowired

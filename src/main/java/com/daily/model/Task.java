@@ -24,6 +24,10 @@ public class Task {
     @Column(name = "description")
     private String description;
 
+    @ManyToOne
+    @JoinColumn(name = "usr_id")
+    private User user;
+
     public Task(TaskRequestDTO data){
         this.title = data.title();
         this.description = data.description();

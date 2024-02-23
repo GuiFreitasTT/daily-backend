@@ -46,7 +46,6 @@ public class TasksController {
 
         if (optionalTask.isPresent()) {
             Task taskData = optionalTask.get();
-            taskData.setTitle(taskDTO.title());
             taskData.setDescription(taskDTO.description());
             repository.save(taskData);
         }

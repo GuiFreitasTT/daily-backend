@@ -18,9 +18,6 @@ public class Task {
     @Column(name = "tsk_id")
     private Long id;
 
-    @Column(name = "title")
-    private String title;
-
     @Column(name = "description")
     private String description;
 
@@ -29,7 +26,6 @@ public class Task {
     private User user;
 
     public Task(TaskRequestDTO data){
-        this.title = data.title();
         this.description = data.description();
     }
 

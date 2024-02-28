@@ -1,9 +1,9 @@
 # daily-backend
  
-## ✔️ Técnicas e tecnologias utilizadas
+## ✔️ Techniques and technologies used
 
 - ``Java 17``
 - ``InteliJ IDEA``
-- ``Paradigma de orientação a objetos``
+- ``Object-Oriented Programming (OOP)``
 - ``JPA``
-- ``Autenticação e Autorização de usuário via Spring Security``
+- ``User authentication and authorization Spring Security``

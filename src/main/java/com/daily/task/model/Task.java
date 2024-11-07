@@ -1,6 +1,8 @@
-package com.daily.model;
+package com.daily.task.model;
 
-import com.daily.dto.TaskRequestDTO;
+import com.daily.task.dto.TaskRequestDTO;
+import com.daily.user.model.User;
+
 import jakarta.persistence.*;
 import lombok.*;
 

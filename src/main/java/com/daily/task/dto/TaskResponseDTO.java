@@ -1,7 +1,7 @@
-package com.daily.dto;
+package com.daily.task.dto;
 
-import com.daily.model.Task;
-import com.daily.model.User;
+import com.daily.task.model.Task;
+import com.daily.user.model.User;
 
 public record TaskResponseDTO(Long id, String description, User user){
 

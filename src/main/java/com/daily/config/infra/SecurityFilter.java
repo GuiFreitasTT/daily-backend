@@ -1,6 +1,5 @@
-package com.daily.infra.security;
+package com.daily.config.infra;
 
-import com.daily.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,6 +12,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.context.SecurityContextHolderFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.daily.user.repository.UserRepository;
 
 import java.io.IOException;
 

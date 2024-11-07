@@ -1,4 +1,4 @@
-package com.daily.controller;
+package com.daily.task.controller;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.daily.dto.TaskRequestDTO;
-import com.daily.dto.TaskResponseDTO;
-import com.daily.services.TaskService;
+import com.daily.task.dto.TaskRequestDTO;
+import com.daily.task.dto.TaskResponseDTO;
+import com.daily.task.service.TaskService;
 
 @RestController
 @RequestMapping("task")

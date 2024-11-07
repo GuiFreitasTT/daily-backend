@@ -1,4 +1,4 @@
-package com.daily.services;
+package com.daily.config.authentication.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,12 +7,12 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.daily.dto.AuthenticationDTO;
-import com.daily.dto.LoginResponseDTO;
-import com.daily.dto.RegisterDTO;
-import com.daily.infra.security.TokenService;
-import com.daily.model.User;
-import com.daily.repository.UserRepository;
+import com.daily.config.authentication.dto.AuthenticationDTO;
+import com.daily.config.infra.TokenService;
+import com.daily.user.dto.LoginResponseDTO;
+import com.daily.user.dto.RegisterDTO;
+import com.daily.user.model.User;
+import com.daily.user.repository.UserRepository;
 
 @Service
 public class AuthenticationService {

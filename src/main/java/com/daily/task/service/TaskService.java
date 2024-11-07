@@ -1,4 +1,4 @@
-package com.daily.services;
+package com.daily.task.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,18 +9,18 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import com.daily.dto.TaskRequestDTO;
-import com.daily.dto.TaskResponseDTO;
-import com.daily.model.Task;
-import com.daily.model.User;
-import com.daily.repository.DailyRepository;
-import com.daily.repository.UserRepository;
+import com.daily.task.dto.TaskRequestDTO;
+import com.daily.task.dto.TaskResponseDTO;
+import com.daily.task.model.Task;
+import com.daily.task.repository.TaskRepository;
+import com.daily.user.model.User;
+import com.daily.user.repository.UserRepository;
 
 @Service
 public class TaskService {
 
 	@Autowired
-	private DailyRepository repository;
+	private TaskRepository repository;
 
 	@Autowired
 	private UserRepository userRepository;

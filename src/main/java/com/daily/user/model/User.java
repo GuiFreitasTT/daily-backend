@@ -1,4 +1,4 @@
-package com.daily.model;
+package com.daily.user.model;
 
 import jakarta.persistence.*;
 import lombok.*;

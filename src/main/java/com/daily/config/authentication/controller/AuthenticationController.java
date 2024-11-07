@@ -1,4 +1,4 @@
-package com.daily.controller;
+package com.daily.config.authentication.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.daily.dto.AuthenticationDTO;
-import com.daily.dto.RegisterDTO;
-import com.daily.infra.security.TokenService;
-import com.daily.services.AuthenticationService;
+import com.daily.config.authentication.dto.AuthenticationDTO;
+import com.daily.config.authentication.service.AuthenticationService;
+import com.daily.config.infra.TokenService;
+import com.daily.user.dto.RegisterDTO;
 
 import jakarta.validation.Valid;
 
